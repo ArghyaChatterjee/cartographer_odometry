@@ -1,4 +1,4 @@
-# Odometry Generation and Mapping from Cartographer ROS
+# Odometry Generation & Mapping from Cartographer ROS
 Cartographer doesn't produce any odometry. So,this code is written to listen to tf tree of cartographer and produce the odometry message as `/odom` topic. This repository contains 2 ros packages for mapping and localization (odometry) using cartographer_ros package.
 
 # RPLIDAR X1/X2 and Cartographer ROS launch 
