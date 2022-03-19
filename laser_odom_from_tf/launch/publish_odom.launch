@@ -1,0 +1,5 @@
+<launch>
+
+    <node pkg="laser_odom_from_tf" name="laser_odom_from_tf" type="laser_odom_from_tf_node" output="screen"/>
+
+</launch>
