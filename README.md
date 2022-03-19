@@ -1,9 +1,9 @@
 # Odometry Generation from Cartographer ROS
 This repository contains 2 ros packages for mapping and localization (odometry) using cartographer_ros package.
 
-# RPLIDAR X1/X2 - Cartographer project
+# RPLIDAR X1/X2 and Cartographer ROS launch 
 
-This project was used to create a demonstrator of using RPLIDAR X1/X2 with Google Cartographer.
+This project was used to create a demonstrator of using RPLIDAR X1/X2 with Google Cartographer ROS.
 
 ## Start Cartographer ROS package
 
