@@ -1,11 +1,11 @@
-# cartographer_odometry
-This repository is a package for mapping and localization (odometry) using cartographer_ros package.
+# Cartographer_ROS_Odometry
+This repository contains 2 ros packages for mapping and localization (odometry) using cartographer_ros package.
 
 # RPLIDAR X1/X2 - Cartographer project
 
 This project was used to create a demonstrator of using RPLIDAR X1/X2 with Google Cartographer.
 
-## Start Cartographer
+## Start Cartographer ROS package
 
 1. Clone the repo as your src directory `git clone git@github.com:ArghyaChatterjee/cartographer_odometry.git`
 2. Initialize and update submodules `git submodule update --init`
@@ -18,7 +18,7 @@ This project was used to create a demonstrator of using RPLIDAR X1/X2 with Googl
 
 This node will listen to tf tree and publish the message to a topic as an odometry message. This work was performed to create a demonstrator of using RPLIDAR X1/X2 with Google Cartographer.
 
-## Start the laser odom from tf 
+## Start the laser odom from tf package
 
 1. Clone the repo as your src directory `git clone git@github.com:ArghyaChatterjee/cartographer_odometry.git`
 2. Initialize and update submodules `git submodule update --init`
