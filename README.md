@@ -9,18 +9,18 @@ This node will launch RPLIDAR X1/X2 and cartographer_ros package for mapping onl
 
 1. Clone the repo as your src directory 
 ```
-cd catkin_ws
+cd ~/catkin_ws
 git clone https://github.com/ArghyaChatterjee/cartographer_odometry.git
 ```
-2. Initialize and update submodules 
+2. Perform the setup described in https://github.com/Slamtec/rplidar_ros for rplidar ros repo setup.
+3. If you don't have cartographer installed, Run:
 ```
-git submodule update --init
-```
-3. Perform the setup described in rplidar/README.md
-4. If you don't have cartographer installed run 
-```
-cd catkin_ws
+cd ~/catkin_ws
 rosdep install --from-paths src --ignore-src --rosdistro melodic -r -y
+```
+4. Compile the sub workspace of whole workspace 
+```
+catkin_make --only-pkg-with-deps cartographer_mapping
 ```
 5. Source your workspace: 
 ```
@@ -42,25 +42,21 @@ This node will listen to tf tree of cartographer_ros node and publish the transf
 cd catkin_ws
 git clone https://github.com/ArghyaChatterjee/cartographer_odometry.git
 ```
-2. Initialize and update submodules 
-```
-git submodule update --init
-```
-3. If you don't have necessary dependencies installed run 
+2. If you don't have necessary dependencies installed run 
 ```
 cd catkin_ws
 rosdep install --from-paths src --ignore-src --rosdistro melodic -r -y
 ```
-5. Compile the sub workspace of whole workspace 
+3. Compile the sub workspace of whole workspace 
 ```
 catkin_make --only-pkg-with-deps laser_odom_from_tf
 ```
-6. Source your workspace 
+4. Source your workspace 
 ```
 source devel/setup.bash
 ```
-7. Make sure that the `tf` publishing node is publishing the transform between desired frame. 
-8. Start the odometry listener node from tf tree
+5. Make sure that the `tf` publishing node is publishing the transform between desired frame. 
+6. Start the odometry listener node from tf tree
 ```
 roslaunch laser_odom_from_tf publish_odom.launch
 ```
